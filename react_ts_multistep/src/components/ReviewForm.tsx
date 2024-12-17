@@ -1,7 +1,29 @@
+import {
+  BsFillEmojiHeartEyesFill,
+  BsFillEmojiSmileFill,
+  BsFillEmojiNeutralFill,
+  BsFillEmojiFrownFill
+} from "react-icons/bs"
 
-const ReviewForm = () => {
+import "./ReviewForm.css"
+
+type ReviewForm = {
+  data: {
+    review: string,
+    comment: string
+  }
+  updateFieldHandler: (key: string, value: string) => void
+}
+
+const ReviewForm = ({data, updateFieldHandler}: ReviewForm) => {
   return (
-    <div>ReviewForm</div>
+    <div className="review-form">
+      <div className="from-control score-container">
+        <label className="radio-conteiner">
+          <input type="radio" />
+        </label>
+      </div>
+    </div>
   )
 }
 

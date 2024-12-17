@@ -31,12 +31,12 @@ function App() {
 
   const updateFieldHandler = (key: string, value: string) => {
     setData((prev) => {
-      return {...prev, [key]: value}
+      return { ...prev, [key]: value }
     })
   }
 
   const formComponent = [
-    <UserForm data={data} />,
+    <UserForm data={data} updateFieldHandler={updateFieldHandler} />,
     <ReviewForm />,
     <Thanks />
   ]
@@ -50,7 +50,7 @@ function App() {
         <p>Ficamos felizes com a sua compra, utilize o formulário abaixo para avaliar o produto</p>
       </div>
       <div className="form-container">
-        <Steps currentStep={currentStep}/>
+        <Steps currentStep={currentStep} />
         <form onSubmit={(e) => changeSteps(currentStep + 1, e)}>
           <div className="inputs-container">
             {currentComponent}

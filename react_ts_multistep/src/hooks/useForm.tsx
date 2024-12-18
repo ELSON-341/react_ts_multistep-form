@@ -14,6 +14,7 @@ export function UseForm(steps: ReactElement[]) {
     return {
         changeSteps,
         currentComponent: steps[currentStep],
-        currentStep
+        currentStep,
+        isLastStep: currentStep + 1 === steps.length ? true : false
     }
 }

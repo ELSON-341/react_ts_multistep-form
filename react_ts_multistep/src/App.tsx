@@ -41,7 +41,7 @@ function App() {
   const formComponent = [
     <UserForm data={data} updateFieldHandler={updateFieldHandler} />,
     <ReviewForm data={data} updateFieldHandler={updateFieldHandler}/>,
-    <Thanks />
+    <Thanks data={data} />
   ]
 
   const { currentStep, currentComponent, changeSteps, isLastStep } = UseForm(formComponent)
